@@ -1,0 +1,56 @@
+:root {
+  --primary-color: #e02041;
+  --primary-color-darker: #b41934;
+  --main-title: #13131a;
+  --sub-title: #41414d;
+  --text: #737380;
+  --secondary-text: #a8a8b3;
+  --input-text: #ffffff;
+  --input-line: #dcdce5;
+  --background-color: #f0f0f5;
+}
+
+body {
+  background-color: var(--background-color);
+}
+
+main {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.input {
+  padding: 0.7rem;
+  border-radius: 0.313rem;
+  color: var(--text);
+  border: 1px solid var(--input-line);
+}
+
+::placeholder {
+  color: var(--text);
+  opacity: 1;
+}
+
+.default-button {
+  padding: 0.7rem;
+  border-radius: 0.313rem;
+  margin: 1rem 0rem 3rem 0rem;
+  color: var(--input-text);
+  font-weight: bold;
+  background-color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+}
+
+.default-button:hover {
+  cursor: pointer;
+  background-color: var(--primary-color-darker);
+  border: 1px solid var(--primary-color-darker);
+}
+
+.default-icon {
+  color: var(--primary-color);
+}

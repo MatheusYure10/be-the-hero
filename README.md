@@ -1,2 +1,2 @@
 # be-the-hero
-Projetin
+Omnistack 11 Rocketseat design - project practice

@@ -3,50 +3,63 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Be The Hero</title>
-    <link rel="stylesheet" href="reset.css" />
-    <link rel="stylesheet" href="styles.css" />
+
+    <script
+      src="https://kit.fontawesome.com/7ef1bf4c45.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="stylesheet" href="./styles/reset.css" />
+    <link rel="stylesheet" href="./styles/global.css" />
+    <link rel="stylesheet" href="./styles/index.css" />
   </head>
+
   <body>
     <main>
       <section class="logon">
         <div class="logon__image-container">
           <img src="./img/logo.svg" alt="logo" class="logon__image" />
         </div>
+
         <div class="logon__form">
           <h1 class="logon__form-title">Faça seu logon</h1>
+
           <input
             type="text"
             id="email"
             name="email"
-            placeholder="Seu email"
-            class="logon__form-input"
+            placeholder="Seu E-mail"
+            class="logon__form-input input"
           />
 
           <button
             type="button"
             id="loginBtn"
             name="loginBtn"
-            class="logon__form-btn"
+            class="logon__form-btn default-button"
           >
             Entrar
           </button>
 
-          <a
-            href="http://www.google.com.br"
-            target="_blank"
-            class="logon__form-link"
-            >Não tenho cadastro</a
-          >
+          <a href="register.html" target="_self" class="logon__form-link">
+            <div class="logon__link-container">
+              <i
+                class="default-icon logon__link-icon fa-solid fa-arrow-right-to-bracket"
+              ></i>
+              <span class="logon__link-anchor">Não tenho cadastro</span>
+            </div>
+          </a>
         </div>
       </section>
 
       <section class="side">
         <div class="side__background-container">
           <img
-            class="side__background"
             src="./img/side-background.svg"
             alt="side-background"
+            class="side__background"
           />
         </div>
       </section>

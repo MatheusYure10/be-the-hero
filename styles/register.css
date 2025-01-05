@@ -1,0 +1,78 @@
+main {
+  padding: 7rem;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 0rem 3rem;
+  width: 40%;
+}
+
+.description__logo {
+  height: 5.059rem;
+  width: 11.938rem;
+}
+
+.description__header {
+  margin: 3rem 0rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.description__subtitle {
+  color: var(--text);
+}
+
+.description__link {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.description__link-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.description__link-anchor {
+  font-weight: bold;
+  color: var(--sub-title);
+}
+
+.description__link-anchor:hover {
+  color: color-mix(in srgb, currentColor 60%, var(--input-text) 40%);
+  cursor: pointer;
+}
+
+.form {
+  width: 60%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.form__register {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+  width: 90%;
+}
+
+.form__register-location-container {
+  display: grid;
+  grid-template-columns: 88.3% 10%;
+  gap: 0.625rem;
+}
+
+/* Ajustes gerais para os inputs */
+.form__register-location-input {
+  width: 100%; /* Garante que o input ocupe toda a largura de sua célula */
+}
