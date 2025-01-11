@@ -76,3 +76,37 @@ main {
 .form__register-location-input {
   width: 100%; /* Garante que o input ocupe toda a largura de sua célula */
 }
+
+.form__logo,
+.form__subtitle {
+  display: none;
+}
+
+@media (min-width: 0px) and (max-width: 1280px) {
+  main {
+    padding: 0rem;
+  }
+  .description {
+    display: none;
+  }
+
+  .form {
+    width: 100%;
+  }
+
+  .form__logo,
+  .form__subtitle {
+    display: block;
+  }
+
+  .form__subtitle {
+    width: 90%;
+    margin: 1.4rem;
+    color: var(--text);
+  }
+
+  .form__logo {
+    width: 10rem;
+    height: 4.5rem;
+  }
+}
