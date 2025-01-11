@@ -11,6 +11,12 @@
       crossorigin="anonymous"
     ></script>
 
+    <script>
+      function redirectToFeed() {
+        window.location.href = "feed.html"; // Caminho para o arquivo
+      }
+    </script>
+
     <link rel="stylesheet" href="./styles/reset.css" />
     <link rel="stylesheet" href="./styles/global.css" />
     <link rel="stylesheet" href="./styles/index.css" />
@@ -39,6 +45,7 @@
             id="loginBtn"
             name="loginBtn"
             class="logon__form-btn default-button"
+            onclick="redirectToFeed()"
           >
             Entrar
           </button>
