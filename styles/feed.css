@@ -148,6 +148,141 @@ main {
   color: var(--text);
 }
 
+/* Transição suave para o modal */
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100vh;
+  opacity: 0; /* Começa invisível */
+  visibility: hidden; /* Modal está oculto inicialmente */
+  transition: opacity 0.2s ease, visibility 0s 0.2s; /* Transição de opacidade e visibilidade */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Quando o modal está visível */
+.showModal {
+  opacity: 1;
+  visibility: visible; /* Modal visível */
+  transition: opacity 0.2s ease, visibility 0s 0s; /* Transição suave ao aparecer */
+}
+
+/* Quando o modal está oculto */
+.hideModal {
+  opacity: 0;
+  visibility: hidden; /* Modal invisível */
+  transition: opacity 0.2s ease, visibility 0s 0.2s; /* Transição suave ao desaparecer */
+}
+
+.modal__body {
+  background-color: var(--background-color);
+  width: 60%;
+  height: 50%;
+  display: flex;
+  flex-direction: row;
+  padding: 2rem 5rem;
+  border-radius: 0.5rem;
+  gap: 1.2rem;
+}
+
+.modal__info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+
+.modal__logo {
+  height: 9rem;
+  width: 15rem;
+}
+
+.modal__info-description {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.modal__info-title {
+  color: var(--main-title);
+}
+
+.modal__info-subtitle {
+  color: var(--modal-text);
+  font-weight: 500;
+}
+
+.modal__link-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 1.2rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--sub-title);
+}
+
+.modal__link-anchor:hover {
+  color: color-mix(in srgb, currentColor 40%, var(--primary-color) 60%);
+  cursor: pointer;
+}
+
+.modal__form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.form__title,
+.form__description,
+.form__price {
+  padding: 1.2rem;
+  border-radius: 0.313rem;
+  color: var(--text);
+  border: 1px solid var(--input-line);
+  font-size: 1rem;
+}
+
+.form__button-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.form__button--cancel {
+  background-color: transparent;
+  border: 1px solid var(--text);
+  padding: 1.2rem;
+  width: 30%;
+  color: var(--text);
+}
+
+.form__button--cancel:hover {
+  background-color: var(--text);
+  border: 1px solid transparent;
+  color: var(--default-white);
+}
+
+.form__button--submit {
+  padding: 1.2rem;
+  width: 60%;
+}
+
 @media (min-width: 0px) and (max-width: 768px) {
   .nav__logo {
     height: 2rem;
@@ -172,5 +307,49 @@ main {
     padding: 0.5rem;
     border: 1px solid var(--input-line);
     font-size: 0.8rem;
+  }
+}
+
+@media (min-width: 0px) and (max-width: 1365px) {
+  .modal__body {
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+    padding: 2rem;
+    overflow: auto;
+  }
+
+  .modal__logo {
+    height: 6rem;
+    width: 12rem;
+  }
+
+  .form__title,
+  .form__description,
+  .form__price,
+  .form__button {
+    padding: 1rem;
+  }
+
+  .form__button {
+    margin: 0;
+  }
+
+  .modal__info {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .modal__info-description {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .modal__link-container {
+    display: none;
+  }
+
+  .form {
+    width: 80%;
   }
 }

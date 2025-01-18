@@ -301,5 +301,74 @@
         </div>
       </section>
     </main>
+    <div class="modal showModal">
+      <div class="modal__body">
+        <div class="modal__info">
+          <img src="./img/logo.svg" alt="logo" class="modal__logo" />
+
+          <div class="modal__info-description">
+            <h1 class="modal__info-title">Cadastrar novo caso</h1>
+
+            <h2 class="modal__info-subtitle">
+              Descreva o caso detalhadamente para encontrar um herói para
+              resolver isso.
+            </h2>
+          </div>
+
+          <div class="modal__link-container">
+            <i class="modal__link-icon default-icon fa-solid fa-arrow-left"></i>
+            <span class="modal__link-anchor">Voltar para home</span>
+          </div>
+        </div>
+
+        <div class="modal__form">
+          <form action="#" class="form">
+            <input
+              id="modalTitle"
+              name="modalTitle"
+              class="form__title"
+              type="text"
+              placeholder="Título do caso"
+            />
+
+            <textarea
+              id="modalDescription"
+              name="modalDescription"
+              class="form__description"
+              placeholder="Descrição"
+              rows="4"
+              cols="50"
+            ></textarea>
+
+            <input
+              type="number"
+              id="modalPrice"
+              name="modalPrice"
+              class="form__price"
+              placeholder="Valor em reais"
+            />
+
+            <div class="form__button-container">
+              <button
+                type="button"
+                id="cancelBtn"
+                name="cancelBtn"
+                class="default-button form__button form__button--cancel"
+              >
+                Cancelar
+              </button>
+              <button
+                type="submit"
+                id="submitBtn"
+                name="submitBtn"
+                class="default-button form__button form__button--submit"
+              >
+                Cadastrar
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
