@@ -11,6 +11,8 @@
       crossorigin="anonymous"
     ></script>
 
+    <script src="./js/main.js" defer></script>
+
     <link rel="stylesheet" href="./styles/reset.css" />
     <link rel="stylesheet" href="./styles/global.css" />
     <link rel="stylesheet" href="./styles/feed.css" />
@@ -25,7 +27,9 @@
       </div>
 
       <div class="nav__buttons-container">
-        <button type="button" class="nav__btn">Cadastrar novo caso</button>
+        <button type="button" class="nav__btn" id="registerNewCaseBtn">
+          Cadastrar novo caso
+        </button>
 
         <a href="index.html" target="_self" class="nav__link">
           <i class="fa-solid fa-power-off nav__power-off default-icon"></i>
@@ -301,7 +305,8 @@
         </div>
       </section>
     </main>
-    <div class="modal showModal">
+
+    <div id="modal" class="modal hideModal">
       <div class="modal__body">
         <div class="modal__info">
           <img src="./img/logo.svg" alt="logo" class="modal__logo" />
@@ -315,7 +320,7 @@
             </h2>
           </div>
 
-          <div class="modal__link-container">
+          <div class="modal__link-container" id="backToHome">
             <i class="modal__link-icon default-icon fa-solid fa-arrow-left"></i>
             <span class="modal__link-anchor">Voltar para home</span>
           </div>
